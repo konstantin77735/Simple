@@ -1,0 +1,91 @@
+$fontSize: 11px;
+$hColor:#f97300;
+
+@mixin headerr {
+    background-image: url('../img/flowers.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    @include headerr;
+    .overlay {
+        position: relative;
+        min-height: 100%;
+        min-width: 100%;
+        background: rgba(244, 244, 244, 0.60);
+
+        .description {
+            position: absolute;
+            top: 30%;
+
+            p {
+                max-width: 400px;
+                color: #4c4c4c;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
+            }
+        }
+    }
+}
+
+h1,
+h2 {
+    color: $hColor;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, .4);
+}
+
+.main {
+    background-image: url('../img/bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    .mainoverlay {
+        position: relative;
+        min-height: 100%;
+        min-width: 100%;
+        background: rgba(244, 244, 244, 0.60);
+
+        .form-group {
+            max-width: 500px;
+            padding: 5em 0;
+            margin: 0 auto;
+
+            input,
+            textarea {
+                -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, .2);
+                box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, .2);
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+
+    div {
+        max-width: 400px;
+        color: #fff;
+
+        p {
+            text-align: right;
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 750px) {
+    .form-group {
+        width: 90%;
+    }
+
+    .footer p {
+        font-size: $fontSize;
+    }
+}
